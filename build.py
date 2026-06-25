@@ -164,7 +164,7 @@ def build_navbar(prefix):
     return f'''<header class="navbar">
   <div class="navbar__inner">
     <a class="navbar__brand" href="{prefix}overview.html">
-      <img class="navbar__logo" src="{prefix}img/logo.svg" alt="Xagent Logo" />
+      <img class="navbar__logo" src="{prefix}img/xAgent_Favicon_white.png" alt="Xagent Logo" />
       <span class="navbar__title">Xagent <span class="navbar__title-light">Docs</span></span>
     </a>
     <div class="navbar__items--right">
