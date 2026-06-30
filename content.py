@@ -1755,10 +1755,10 @@ Production:   https://your-domain.com''') + '''
     <span class="card__title">Agents <span class="card__arrow">&rarr;</span></span>
     <p class="card__desc">Create and manage AI agents.</p>
   </a>
-  <a class="card" href="../tasks/overview.html">
+  <a class="card" href="../workspace-api/tasks.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v14l11-7z"/></svg></span>
-    <span class="card__title">Tasks <span class="card__arrow">&rarr;</span></span>
-    <p class="card__desc">Submit and monitor task executions.</p>
+    <span class="card__title">SDK Tasks <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Create and monitor SDK task executions.</p>
   </a>
   <a class="card" href="../files/overview.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></span>
@@ -1768,7 +1768,7 @@ Production:   https://your-domain.com''') + '''
   <a class="card" href="../knowledge-bases/overview.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
     <span class="card__title">Knowledge Base <span class="card__arrow">&rarr;</span></span>
-    <p class="card__desc">Manage document collections and search.</p>
+    <p class="card__desc">Manage document collections.</p>
   </a>
   <a class="card" href="../memory/overview.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5 3 3 0 0 0 2 4 3 3 0 0 0 5 1V5a3 3 0 0 0-3-1Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5 3 3 0 0 1-2 4 3 3 0 0 1-5 1"/></svg></span>
@@ -1793,12 +1793,17 @@ Production:   https://your-domain.com''') + '''
   <a class="card" href="../agents/templates.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
     <span class="card__title">Templates <span class="card__arrow">&rarr;</span></span>
-    <p class="card__desc">Pre-built agent templates.</p>
+    <p class="card__desc">Agent templates.</p>
   </a>
   <a class="card" href="../tools/mcp.html">
     <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><circle cx="7" cy="7.5" r="1"/><circle cx="7" cy="16.5" r="1"/></svg></span>
     <span class="card__title">MCP <span class="card__arrow">&rarr;</span></span>
     <p class="card__desc">MCP server management.</p>
+  </a>
+  <a class="card" href="../tools/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/><path d="m9 17 2 2 4-4"/></svg></span>
+    <span class="card__title">Text2SQL <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Database query generation.</p>
   </a>
 </div>
 <h2 id="quick-start">Quick Start</h2>
