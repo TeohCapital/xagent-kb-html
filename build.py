@@ -120,6 +120,7 @@ SECTIONS = [
     ("Invitations", "teams/invitations.html", "mail"),
  ]),
  ("API Reference", [
+    ("API Spec", "api-reference/introduction.html", "code"),
     ("Overview", "api-reference/overview.html", "book"),
     ("Agents", "api-reference/agents.html", "box"),
     ("Workspace SDK", "api-reference/workspace.html", "code"),

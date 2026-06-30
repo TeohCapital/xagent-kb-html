@@ -1719,3 +1719,140 @@ PAGES["channels/telegram.html"] = ("Telegram", '''<h1 id="telegram">Telegram</h1
  (2, "quick-setup", "Quick Setup"),
  (2, "next-steps", "Next Steps"),
 ])
+
+# ===========================================================================
+# API Reference — API Spec (Introduction)
+# ===========================================================================
+PAGES["api-reference/introduction.html"] = ("API Spec", '''<h1 id="api-reference">API Reference</h1>
+<p>The Xagent API provides programmatic access to all platform capabilities — agents, tasks, knowledge bases, models, tools, and more.</p>
+<h2 id="base-url">Base URL</h2>
+''' + c('''Self-hosted:  http://localhost:8000
+Production:   https://your-domain.com''') + '''
+<h2 id="authentication">Authentication</h2>
+<p>Most endpoints require a Bearer token:</p>
+''' + c('''curl http://localhost:8000/api/agents \\
+  -H "Authorization: Bearer YOUR_TOKEN"''') + '''
+<h2 id="interactive-documentation">Interactive Documentation</h2>
+<p>Every Xagent deployment ships live, auto-generated API explorers built from the server's OpenAPI spec:</p>
+<table>
+<thead><tr><th>Tool</th><th>Path</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td><strong>Swagger UI</strong></td><td><code>/docs</code></td><td>Trying requests interactively in the browser.</td></tr>
+<tr><td><strong>ReDoc</strong></td><td><code>/redoc</code></td><td>Clean, readable reference for the whole API.</td></tr>
+<tr><td><strong>OpenAPI JSON</strong></td><td><code>/openapi.json</code></td><td>The raw spec — import into Postman, codegen, etc.</td></tr>
+</tbody>
+</table>
+''' + adm("info", "Live spec", "<p>On a running instance, open <code>http://localhost:8000/docs</code> for Swagger UI or <code>http://localhost:8000/redoc</code> for ReDoc. These always reflect the exact endpoints your version exposes.</p>") + '''
+<h2 id="available-apis">Available APIs</h2>
+<div class="card-grid">
+  <a class="card" href="../getting-started/authentication.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+    <span class="card__title">Authentication <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">User authentication and token management.</p>
+  </a>
+  <a class="card" href="../agents/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5 3 3 0 0 0 2 4 3 3 0 0 0 5 1V5a3 3 0 0 0-3-1Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5 3 3 0 0 1-2 4 3 3 0 0 1-5 1"/></svg></span>
+    <span class="card__title">Agents <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Create and manage AI agents.</p>
+  </a>
+  <a class="card" href="../tasks/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v14l11-7z"/></svg></span>
+    <span class="card__title">Tasks <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Submit and monitor task executions.</p>
+  </a>
+  <a class="card" href="../files/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></span>
+    <span class="card__title">Files <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Upload and manage task files.</p>
+  </a>
+  <a class="card" href="../knowledge-bases/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
+    <span class="card__title">Knowledge Base <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Manage document collections and search.</p>
+  </a>
+  <a class="card" href="../memory/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5 3 3 0 0 0 2 4 3 3 0 0 0 5 1V5a3 3 0 0 0-3-1Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5 3 3 0 0 1-2 4 3 3 0 0 1-5 1"/></svg></span>
+    <span class="card__title">Memory <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Agent memory and learning.</p>
+  </a>
+  <a class="card" href="../models/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span>
+    <span class="card__title">Models <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Configure and use LLM models.</p>
+  </a>
+  <a class="card" href="../tools/built-in.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2z"/></svg></span>
+    <span class="card__title">Tools <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Available agent tools.</p>
+  </a>
+  <a class="card" href="../tools/overview.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+    <span class="card__title">Skills <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Agent skill management.</p>
+  </a>
+  <a class="card" href="../agents/templates.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
+    <span class="card__title">Templates <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">Pre-built agent templates.</p>
+  </a>
+  <a class="card" href="../tools/mcp.html">
+    <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><circle cx="7" cy="7.5" r="1"/><circle cx="7" cy="16.5" r="1"/></svg></span>
+    <span class="card__title">MCP <span class="card__arrow">&rarr;</span></span>
+    <p class="card__desc">MCP server management.</p>
+  </a>
+</div>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="login">Login</h3>
+''' + c('''curl -X POST http://localhost:8000/api/auth/login \\
+  -H "Content-Type: application/json" \\
+  -d '{"username": "admin", "password": "your-password"}\'''') + '''
+<h3 id="create-an-agent">Create an Agent</h3>
+''' + c('''curl -X POST http://localhost:8000/api/agents \\
+  -H "Authorization: Bearer YOUR_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "name": "Research Assistant",
+    "description": "Helps with research tasks",
+    "instructions": "You are a helpful research assistant."
+  }\'''') + '''
+<h3 id="submit-a-task">Submit a Task</h3>
+''' + c('''curl -X POST http://localhost:8000/api/chat/task/create \\
+  -H "Authorization: Bearer YOUR_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "title": "Research recent AI trends",
+    "description": "Research recent AI trends",
+    "agent_id": YOUR_AGENT_ID
+  }\'''') + '''
+<h2 id="rate-limits">Rate Limits</h2>
+<p>API calls may be rate limited. Check the response headers for limit information:</p>
+''' + c('''X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1640995200''') + '''
+<h2 id="error-handling">Error Handling</h2>
+<p>Errors follow standard HTTP status codes:</p>
+<table>
+<thead><tr><th>Code</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>200</code></td><td>Success</td></tr>
+<tr><td><code>400</code></td><td>Bad Request</td></tr>
+<tr><td><code>401</code></td><td>Unauthorized</td></tr>
+<tr><td><code>422</code></td><td>Validation Error</td></tr>
+<tr><td><code>500</code></td><td>Server Error</td></tr>
+</tbody>
+</table>
+<h2 id="reference-pages">Reference Pages</h2>
+<ul>
+<li><a href="./overview.html">API Reference Overview &rarr;</a> — API groups and prefixes</li>
+<li><a href="./agents.html">Agents API &rarr;</a></li>
+<li><a href="./workspace.html">Workspace SDK &rarr;</a></li>
+</ul>''', [
+ (2, "base-url", "Base URL"),
+ (2, "authentication", "Authentication"),
+ (2, "interactive-documentation", "Interactive Documentation"),
+ (2, "available-apis", "Available APIs"),
+ (2, "quick-start", "Quick Start"),
+ (2, "rate-limits", "Rate Limits"),
+ (2, "error-handling", "Error Handling"),
+ (2, "reference-pages", "Reference Pages"),
+])
